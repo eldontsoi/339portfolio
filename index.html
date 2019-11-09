@@ -12,7 +12,8 @@
 </script>
 
     <meta charset="utf-8">
-    <meta name = 'viewport' content = 'width=device-width, initial-scale=1'>
+    <meta name = 'viewport' content='width=devicewidth', initial-scale='1'>
+    <!-- <meta name = 'viewport' content = 'width=device-width, initial-scale= 1'> -->
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
 
 </head>
 <body>
-<div class="skip"><a href="#main">Skip to Main Content</a></div>
+<div class="skip"><a href="#about">Skip to Main Content</a></div>
 <div class="container">
 
   <!-- <a href="#home"><img src="images/logo.png" alt="logo" id="logo"></a> -->
@@ -126,19 +127,11 @@
   <div class="contact">
   <h2>Contact</h2>
     <a name="contact"></a>
-      <div class="container">
-    <div class="contactform">
-      <form action="https://formspree.io/mzbpnarp" method="POST">
-        <label for="name">Name</label>
-        <div id = "namebox">
-        <input type="text" name="name" placeholder="Your name.."></div>
-        <div id = "emailbox">
-        <label for="email">Email</label></div>
-
-        <input type="email" name="_replyto" placeholder="Your email..">
-        <input type="submit" value="Send">
-      </form>
+    <div id = 'resume'>
+      <h3>Here is the link to my resume</h3>
     </div>
+
+
 <!--   <form action="action_page.php">
     <div class="row">
       <div class="col-25">
@@ -181,12 +174,24 @@
       <input type="submit" value="Submit">
     </div>
   </form> -->
-</div>
+
       <div class="gallery">
 
         <iframe id="iframe-container" src="images/resume.pdf" width="100%" height="1000px"; overflow:auto gesture="media"  " allowfullscreen></iframe>
 
       </div>
+          <div class="contactform">
+      <form action="https://formspree.io/mzbpnarp" method="POST">
+        <label for="name">Name</label>
+        <div id = "namebox">
+        <input type="text" name="name" placeholder="Your name.."></div>
+        <div id = "emailbox">
+        <label for="email">Email</label></div>
+
+        <input type="email" name="_replyto" placeholder="Your email..">
+        <input type="submit" value="Send">
+      </form>
+    </div>
     </div>
 
 
