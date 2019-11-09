@@ -66,12 +66,12 @@
 <!--       <div class="about-image">
         <img id="image1" src="images/about.jpg" alt="eldon's intro" />
       </div> -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
+    <div class="flip-card" tabindex="0">
+      <div class="flip-card-inner"tabindex="0">
+        <div class="flip-card-front" tabindex="0">
       <img src="images/about.jpg" alt="Avatar" style="width:400px;height:300px;">
         </div>
-      <div class="flip-card-back">
+      <div class="flip-card-back" tabindex="0">
       <p> - University of Michigan</p>
         <p> - School of Information</p>
         <p> - Junior in Information Science</p>
@@ -125,10 +125,10 @@
     <img id="image9" src="images/eurotech.jpg" alt="EuroTech vlog" />
   </div>
   <div class="contact">
-  <h2>Contact</h2>
+    <h2>Contact</h2>
     <a name="contact"></a>
     <div id = 'resume'>
-      <h3>Here is the link to my resume</h3>
+      <a href="https://drive.google.com/open?id=1CDlosMz6uIFgL0rVEJMLKOWiPzcXSRLQ" target="_blank"><h3 >Here is the link to my resume</h3></a>
     </div>
 
 
@@ -176,22 +176,23 @@
   </form> -->
 
       <div class="gallery">
-
         <iframe id="iframe-container" src="images/resume.pdf" width="100%" height="1000px"; overflow:auto gesture="media"  " allowfullscreen></iframe>
-
       </div>
-          <div class="contactform">
-      <form action="https://formspree.io/mzbpnarp" method="POST">
-        <label for="name">Name</label>
-        <div id = "namebox">
-        <input type="text" name="name" placeholder="Your name.."></div>
-        <div id = "emailbox">
-        <label for="email">Email</label></div>
 
-        <input type="email" name="_replyto" placeholder="Your email..">
-        <input type="submit" value="Send">
-      </form>
-    </div>
+      <div class="contactform">
+        <form action="https://formspree.io/mzbpnarp" method="POST">
+          <label>Name
+            <input id = "namebox" type="text" name="name" placeholder="Your name..">
+          </label>
+
+          <label> Email
+            <input id = "emailbox" type="email" name="_replyto" placeholder="Your email..">
+          </label>
+
+
+          <input type="submit" value="Send">
+        </form>
+      </div>
     </div>
 
 
