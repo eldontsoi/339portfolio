@@ -108,11 +108,6 @@ nav a:hover{
   text-decoration: underline;
   -webkit-transition: 0.5s ease;
   /*text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);*/
-
-
-
-
-
 }
 
 nav img{
@@ -318,6 +313,7 @@ p {
 }
 
 
+
 /*#namebox {
   width: 100%;
   height: 150px;
@@ -330,6 +326,7 @@ p {
 }*/
 
 input[type=text]{
+    grid-row: 8/auto;
     width: 100%;
   height: 150px;
   padding: 12px 20px;
@@ -354,10 +351,49 @@ input[type=email] {
 }
 iframe {
 display:none
+grid-template-rows: 55px 0px;
+}
+
+
+@media print {
+  img{
+    display: none;
+  }
+
+  .navi{
+    display: none;
+  }
+
+}
+footer{
+  background-color: white;
+  color: white;
+  grid-column: 1 / -1;
+  grid-row: 9 / auto;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 @media screen and (min-width: 300px){
 
+#resume {
+      -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+ background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+
+  display: inline-block;
+  font-size: 16px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+}
 .flip-card-back {
   padding-top: 80px;
   background-color: black;
@@ -457,107 +493,108 @@ display:none
     -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted;
   }
-iframe {
-display: inline-block;
-}
+
 
 }
 
 
 @media screen and (min-width: 850px){
 
-header{
-  padding-top: 200px;
-  /*padding-bottom: 200px;*/
-  background-attachment: fixed; /* Parallax effect */
-  background-image: url("../images/background4.jpg");
-  backface-visibility:
-  /*opacity: 0.1;*/
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 450px;                /* Parallax effect */
-  text-align: center;
-  /*background-color: #b3cde0;*/
-  /*display: grid;*/
-  grid-column: 1/-1;
-  grid-row: 2/auto;
-}
-/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card*/
-/*https://www.w3schools.com/howto/howto_css_flip_card.asp*/
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-      grid-column: 2/3;
-    grid-row: 3/auto;
-    justify-self: center;
-    overflow: hidden;
-    max-width: 400px;
-  background-color: transparent;
-  width: 500px;
-  height: 300px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  -webkit-backface-visibility: hidden;
-         backface-visibility: hidden;
- -webkit-transition: 0.6s;
-         transition: 0.6s;
- -webkit-transform-style: preserve-3d;
-         transform-style: preserve-3d;
-}
+  header{
+    padding-top: 200px;
+    /*padding-bottom: 200px;*/
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("../images/background4.jpg");
+    backface-visibility:
+    /*opacity: 0.1;*/
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 450px;                /* Parallax effect */
+    text-align: center;
+    /*background-color: #b3cde0;*/
+    /*display: grid;*/
+    grid-column: 1/-1;
+    grid-row: 2/auto;
+  }
+  /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card*/
+  /*https://www.w3schools.com/howto/howto_css_flip_card.asp*/
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+        grid-column: 2/3;
+      grid-row: 3/auto;
+      justify-self: center;
+      overflow: hidden;
+      max-width: 400px;
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    -webkit-backface-visibility: hidden;
+           backface-visibility: hidden;
+   -webkit-transition: 0.6s;
+           transition: 0.6s;
+   -webkit-transform-style: preserve-3d;
+           transform-style: preserve-3d;
+  }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-   -webkit-backface-visibility: hidden;
-         backface-visibility: hidden;
- -webkit-transition: 0.6s;
-         transition: 0.6s;
- -webkit-transform-style: preserve-3d;
-         transform-style: preserve-3d;
- position: absolute;
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+     -webkit-backface-visibility: hidden;
+           backface-visibility: hidden;
+   -webkit-transition: 0.6s;
+           transition: 0.6s;
+   -webkit-transform-style: preserve-3d;
+           transform-style: preserve-3d;
+   position: absolute;
 
-}
+  }
 
-/* Style the front side (fallback if image is missing) */
+  /* Style the front side (fallback if image is missing) */
 
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-   z-index: 2;
- -webkit-transform: rotateY(0deg);
-         transform: rotateY(0deg);
-}
-}
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+     z-index: 2;
+   -webkit-transform: rotateY(0deg);
+           transform: rotateY(0deg);
+  }
+  iframe {
+    display: inline-block;
+  }
 
-/* Style the back side */
-.flip-card-back {
+
+  /* Style the back side */
+  .flip-card-back {
   padding-top: 80px;
   background-color: black;
   color: white;
   transform: rotateY(180deg);
    -webkit-transform: rotateY(-180deg);
          transform: rotateY(-180deg);
-}
+  }
 
   .card > header{
     background: #50C7C7;
@@ -600,7 +637,7 @@ header{
   }
 
   /* Navbar */
-
+/*
   .nav{
 
     display: -webkit-box;
@@ -617,7 +654,7 @@ header{
     vertical-align: middle !important;
   }
 
-.underbar{
+  .underbar{
   width: 0;
   height: 5px;
   background: rgba(100,100,200,0);
@@ -626,51 +663,31 @@ header{
   position: absolute;
   -webkit-transition: 0.5s ease;
   vertical-align: middle !important;
-}
+  }
 
   .nav-links{
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    list-style: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  list-style: none;
   }
 
   .nav-item a{
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-  }
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
 
   .nav-item a:hover, a:focus{
-    color: #50C7C7;
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
-  }
-
-
-iframe {
-display: inline-block;
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  }*/
 }
 
-@media print {
-  img{
-    display: none;
-  }
 
-  .navi{
-    display: none;
-  }
 
-}
-footer{
-  background-color: white;
-  color: white;
-  grid-column: 1 / -1;
-  grid-row: 9 / auto;
-  padding-top: 30px;
-  text-align: center;
-  padding-bottom: 50px;
-}
+
