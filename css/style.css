@@ -220,7 +220,81 @@ p {
   grid-row: 4/auto;
 }
 
+/*.about img{
+  max-width: 400px;
+}*/
 
+.flip-card {
+      grid-column: 2/3;
+    grid-row: 3/auto;
+    justify-self: center;
+    overflow: hidden;
+    max-width: 400px;
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+ -webkit-transition: 0.6s;
+         transition: 0.6s;
+ -webkit-transform-style: preserve-3d;
+         transform-style: preserve-3d;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /*transition: transform 0.8s;*/
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  /*transform: rotateY(180deg);*/
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+ -webkit-transition: 0.6s;
+         transition: 0.6s;
+ -webkit-transform-style: preserve-3d;
+         transform-style: preserve-3d;
+ position: absolute;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+   z-index: 2;
+ /*-webkit-transform: rotateY(0deg);*/
+         /*transform: rotateY(0deg);*/
+}
+}
+
+/* Style the back side */
+.flip-card-back {
+  padding-top: 80px;
+  background-color: black;
+  color: white;
+  /*transform: rotateY(180deg);*/
+   /*-webkit-transform: rotateY(-180deg);*/
+         /*transform: rotateY(-180deg);*/
+}
 
 .vlog{
   grid-column: 2/3;
@@ -281,7 +355,14 @@ p {
     padding: 20px 0;
     border-radius: 7px 7px 0 0;
   }*/
-
+.flip-card-back {
+  padding-top: 80px;
+  background-color: black;
+  color: white;
+  /*transform: rotateY(0deg);*/
+ /*  -webkit-transform: rotateY(-180deg);
+         transform: rotateY(-180deg);*/
+}
   .card > ul{
     list-style: none;
     padding: 0;
