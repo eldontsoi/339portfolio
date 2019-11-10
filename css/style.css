@@ -108,12 +108,13 @@ body{
 }
 nav ul{
   list-style-type: none;
+
 }
 nav li{
   /*Your code here */
   padding-right: 30px;
   vertical-align: middle;
-  display: inline;
+  display: inline-block;
 }
 nav a{
   color: black;
@@ -128,7 +129,7 @@ nav a:hover{
 
 nav img{
   background-color: white;
-
+  padding-top: 10px;
   justify-self: left;
   /*grid-column: 1/2;
   grid-row: 1/auto;*/
@@ -143,7 +144,7 @@ nav img{
           animation-direction: alternate;
 }
 
-header{
+#home{
   /*this is mobile view*/
   padding-top: 300px;
   /*padding-bottom: 200px;*/
@@ -183,7 +184,7 @@ h1{
 
 
 
-header p{
+#home p{
 
   color: white;
   font-size: 24px;
@@ -480,7 +481,7 @@ footer{
 
 @media screen and (min-width: 850px){
 
-  header{
+  #home{
     padding-top: 200px;
     /*padding-bottom: 200px;*/
     background-attachment: fixed; /* Parallax effect */
