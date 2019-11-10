@@ -25,6 +25,22 @@ html{
   z-index: 2;
 }
 
+.flip-card a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top:-40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 2;
+}
+
+.flip-card a:focus{
+  top:0;
+  z-index: 2;
+}
+
 a:link {
   text-underline-position: none;
 }
@@ -199,7 +215,7 @@ h2{
 h3{
   font-size: 20px;
   line-height: 1.5;
-  padding-top: 30px;
+  /*padding-top: 30px;*/
   font-weight: bold;
 }
 
@@ -377,11 +393,11 @@ footer{
 
 @media screen and (min-width: 300px){
 
-#resume {
-      -webkit-appearance: button;
+  #resume {
+    -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
- background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; /* Green */
   border: none;
   color: white;
   padding-left: 15px;
@@ -390,18 +406,18 @@ footer{
 
   display: inline-block;
   font-size: 16px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
 
-}
-.flip-card-back {
+  margin-bottom: 30px;
+  }
+
+  .flip-card-back {
   padding-top: 80px;
   background-color: black;
   color: white;
   /*transform: rotateY(0deg);*/
  /*  -webkit-transform: rotateY(-180deg);
          transform: rotateY(-180deg);*/
-}
+  }
   .card > ul{
     list-style: none;
     padding: 0;
@@ -457,45 +473,9 @@ footer{
 
   /* Navbar */
 
-  .nav{
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-            align-items: center;
-    background: #fff;
-    border-bottom: 3px solid #50C7C7;
-  }
-
-  .nav-links{
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    list-style: none;
-  }
-
-  .nav-item a{
-    color: black;
-    text-decoration: none;
-  }
-
-  .nav-item a:hover, a:focus{
-    color: #50C7C7;
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
-  }
-
 
 }
+
 
 
 @media screen and (min-width: 850px){
@@ -596,45 +576,8 @@ footer{
          transform: rotateY(-180deg);
   }
 
-  .card > header{
-    background: #50C7C7;
-    border: 2px solid #45ADAD;
-    padding: 20px 0;
-    border-radius: 7px 7px 0 0;
-  }
 
 
-  .card > ul{
-    list-style: none;
-    padding: 0
-  }
-
-  .card > ul li {
-    width: 90%;
-    margin: 20px auto;
-  }
-
-  .card button{
-    width: 90%;
-    height: 40px;
-    border: 0;
-    margin-left: 12px;
-    border-radius: 7px;
-    background: #45ADAD;
-    color: white;
-    font-size: 1em;
-  }
-
-  .card h3{
-    font-size: 4em;
-    color: white;
-    text-align: center;
-  }
-
-  .card--big{
-    -webkit-transform: scaleX(1.12);
-            transform: scaleX(1.12);
-  }
 
   /* Navbar */
 /*
