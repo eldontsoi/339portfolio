@@ -116,16 +116,46 @@ nav li{
   vertical-align: middle;
   display: inline-block;
 }
+
+.active, nav li:hover {
+  /*background-color: grey;*/
+
+}
+
 nav a{
   color: black;
   font-weight: bold;
   text-decoration: none;
 }
-nav a:hover{
+
+.nav a:link, a:visited {
+  font-weight: bold;
+  color: #066;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  }
+
+.nav a:hover, a:active{
   text-decoration: underline;
   -webkit-transition: 0.5s ease;
+  background-color: red;
   /*text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);*/
 }
+
+.nav a.selected:hover, a.selected:active {
+    display: block;
+    background-color: red;
+    color: #fff;
+}
+
+.nav a.selected:link, a.selected:visited{
+  display: block;
+  background-color: #066;
+  color: blue;
+}
+
+
 
 nav img{
   background-color: white;
@@ -178,9 +208,74 @@ h1{
   padding bottom: 30px;
   align-self: center;
   opacity: 1;
--webkit-animation-timing-function: ease; animation-timing-function: ease;
+  -webkit-animation-timing-function: ease; animation-timing-function: ease;
  -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in;
+
 }
+
+/*@import "nib"
+*/
+
+/*.slashed {
+  absolute: top 0 left 0 right 0 bottom 0;
+  text-shadow: 3px 3px 3px rgba(black, 0.5);
+  .top, .bot {
+    text-align: center;
+    font: 62px/100px arial;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    &:before {
+      content: attr(title);
+      transform: rotate(5deg);
+    }
+  }
+  .top {
+    absolute: top 0 left 5px right 0 bottom 50%;
+    &:before {
+      absolute: bottom -50px left 0 right 0;
+    }
+  }
+  .bot {
+    absolute: top 50% left 0 right 5px bottom 0;
+    &:before {
+      absolute: top -50px left 0 right 0;
+    }
+  }
+}*/
+
+
+/*.slashed {
+  transform: rotate(-5deg);
+  absolute: top 0 left 0 right 0 bottom 0;
+  text-shadow: 3px 3px 3px rgba(black, 0.5);
+}
+.top, .bot {
+  text-align: center;
+  font: 62px/100px arial;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+.top, .bot &:before {
+    content: attr(title);
+    transform: rotate(5deg);
+  }
+
+.top {
+  absolute: top 0 left 5px right 0 bottom 50%;
+}
+.top &:before{
+  absolute: bottom -50px left 0 right 0;
+}
+.bot{
+  absolute: top 50% left 0 right 5px bottom 0;
+}
+.bot &:before{
+  absolute: top -50px left 0 right 0;
+}*/
 
 
 
@@ -225,6 +320,7 @@ p {
   line-height: 50px;
   font-size: 16px;
 }
+
 
 
 
@@ -297,7 +393,7 @@ p {
  /*-webkit-transform: rotateY(0deg);*/
          /*transform: rotateY(0deg);*/
 }
-}
+
 
 /* Style the back side */
 .flip-card-back {
@@ -393,6 +489,9 @@ footer{
   padding-bottom: 50px;
 }
 
+
+
+
 @media screen and (min-width: 300px){
 
   #resume {
@@ -474,7 +573,6 @@ footer{
   }
 
   /* Navbar */
-
 
 }
 
@@ -582,7 +680,7 @@ footer{
 
 
   /* Navbar */
-/*
+
   .nav{
 
     display: -webkit-box;
@@ -630,9 +728,38 @@ footer{
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
-  }*/
+  }
 }
 
 
 
 
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+      animation: none;
+       /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: initial;/* Your code here - set to default setting */
+    transition: initial;/* Your code here - set to default setting */
+    z-index: 1;
+  }
+  .skip a:focus{
+    top:0;
+  }
+  .fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 1;
+        /*transform: translateY(50%);*/
+    }
+    to { opacity: 1 }
+}
+}
